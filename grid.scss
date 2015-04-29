@@ -15,7 +15,7 @@ $div_percent: 12, 6, 4, 3, 2.4, 2, 1.714285714285714, 1.5, 1.333333333333333, 1.
   @extend %clearfix;
 
   & + & {
-    margin-top:$gutter;
+    margin-top:1%;
   }
            }
 
@@ -66,4 +66,14 @@ $div_percent: 12, 6, 4, 3, 2.4, 2, 1.714285714285714, 1.5, 1.333333333333333, 1.
 }
 .col-6 {
   background-color: #214efa;
+}
+
+.col-lg-4 {
+  background-color: #40fa4b;
+}
+.col-md-4 {
+  background-color: #25922c;
+}
+.col-sm-4 {
+  background-color: #17581b;
 }
