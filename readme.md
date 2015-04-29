@@ -39,4 +39,8 @@ Below you can see a basic usage example where two columns of size 4 are centered
 
 ### Attention
 
-The columns themselves are responsive because they are based off percentage values but for smaller devices its not quite ideal. Mobile-friendly is in my to-do list.
+The columns themselves are responsive because they are based off percentage values but for smaller devices its not quite ideal. Mobile-friendly responsiveness is in my to-do list.
+
+### Credits TO
+
+Seb Kay - http://sebkay.com/
