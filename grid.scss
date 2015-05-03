@@ -59,3 +59,16 @@ $col-total:12;
   }
 }
 
+@media (max-width: 768px) {
+
+  [class^="col-"] {
+    display: block;
+    clear: both;
+
+  }
+  [class*="offset-"] {
+      margin-left: 0;
+    }
+  }
+
+

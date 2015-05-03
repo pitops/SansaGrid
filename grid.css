@@ -87,4 +87,12 @@
 .offset-12 {
   margin-left: 100%; }
 
+@media (max-width: 768px) {
+  [class^="col-"] {
+    display: block;
+    clear: both; }
+
+  [class*="offset-"] {
+    margin-left: 0; } }
+
 /*# sourceMappingURL=grid.css.map */
