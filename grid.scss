@@ -7,13 +7,12 @@
 
 // Variables
 $gutter:3%;
-$div_percent: 12, 6, 4, 3, 2.4, 2, 1.714285714285714, 1.5, 1.333333333333333, 1.2, 1.090909090909091, 1;
+$col-total:12;
 
 // Grid system base
 .row {
 
   @extend %clearfix;
-
   & + & {
     margin-top:1%;
   }
@@ -42,20 +41,21 @@ $div_percent: 12, 6, 4, 3, 2.4, 2, 1.714285714285714, 1.5, 1.333333333333333, 1.
    }
 }
 
-@for $i from 1 through 12 {
+@for $i from 1 through $col-total {
   .col-#{$i} {
-    width:  grid_calc($i,nth($div_percent,$i),"column");
+    width:  grid_calc($i,12/$i,"column");
   }
 }
 
-@for $i from 1 through 12 {
-  @if(nth($div_percent,$i) == 1){
+@for $i from 1 through $col-total {
+  @if(12/$i == 1){
     .offset-#{$i} {
-      margin-left:  grid_calc($i,nth($div_percent,$i),"offset",3);
+      margin-left:  grid_calc($i,12/$i,"offset",3);
     }
   }@else{
     .offset-#{$i} {
-      margin-left:  grid_calc($i,nth($div_percent,$i),"offset");
+      margin-left:  grid_calc($i,12/$i,"offset");
     }
   }
 }
+
