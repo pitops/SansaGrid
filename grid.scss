@@ -35,26 +35,26 @@ $col-total:12;
 // Grid system computation
 @function grid_calc($col_num,$div_percent,$type,$remove_gutter:0%){
    @if($type == "column"){
-     @return (100% / $div_percent) - ($gutter * (12-$col_num) /12)
+     @return (100% / $div_percent) - ($gutter * ($col-total - $col_num) /$col-total)
    }@else if ($type == "offset"){
-     @return (100% / $div_percent) - ($gutter * (12-$col_num) /12) +($gutter - $remove_gutter)
+     @return (100% / $div_percent) - ($gutter * ($col-total - $col_num) /$col-total) +($gutter - $remove_gutter)
    }
 }
 
 @for $i from 1 through $col-total {
   .col-#{$i} {
-    width:  grid_calc($i,12/$i,"column");
+    width:  grid_calc($i,$col-total/$i,"column");
   }
 }
 
 @for $i from 1 through $col-total {
-  @if(12/$i == 1){
+  @if($col-total/$i == 1){
     .offset-#{$i} {
-      margin-left:  grid_calc($i,12/$i,"offset",3);
+      margin-left:  grid_calc($i,$col-total/$i,"offset",$gutter);
     }
   }@else{
     .offset-#{$i} {
-      margin-left:  grid_calc($i,12/$i,"offset");
+      margin-left:  grid_calc($i,$col-total/$i,"offset");
     }
   }
 }
