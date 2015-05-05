@@ -29,6 +29,11 @@ $col-total:12;
   &:last-child{
     margin-right:0;
   }
+  @media screen and (max-width: 768px) {
+
+      display: block;
+      clear: both;
+  }
 
 }
 
@@ -59,13 +64,7 @@ $col-total:12;
   }
 }
 
-@media (max-width: 768px) {
-
-  [class^="col-"] {
-    display: block;
-    clear: both;
-
-  }
+@media screen and (max-width: 768px) {
   [class*="offset-"] {
       margin-left: 0;
     }
