@@ -10,13 +10,18 @@ $gutter:3%;
 $col-total:12;
 
 // Grid system base
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
 .row {
 
   @extend %clearfix;
   & + & {
     margin-top:1%;
   }
-           }
+}
 
 [class^="col-"]{
 

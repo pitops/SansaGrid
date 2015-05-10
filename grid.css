@@ -3,6 +3,10 @@
   clear: both;
   content: ''; }
 
+.container {
+  max-width: 80%;
+  margin: 0 auto; }
+
 .row + .row {
   margin-top: 1%; }
 
